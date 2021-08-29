@@ -13,6 +13,7 @@ import { ToastrService } from "./commom/toastr.service";
 import { RouterModule } from "@angular/router";
 import { appRoutes } from "./routes";
 import { EventRouteActivator } from "./events/event-details/event-route-activator.service";
+import { EventListResolver } from "./events/events-list-resolver.service";
 @NgModule({
   declarations: [
     EventsAppComponent,
@@ -28,6 +29,7 @@ import { EventRouteActivator } from "./events/event-details/event-route-activato
     EventService,
     ToastrService,
     EventRouteActivator,
+    EventListResolver,
     {
       provide: "canDeactivateCreateEvent",
       useValue: checkDirtyState
